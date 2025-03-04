@@ -3,6 +3,8 @@
 This injector will install the necessary payload to keep a btrfs formatted /home even through system updates. You may also choose to only install the support for formatting and mounting of multiple filesystems for the SD cards.
 It will allow to mount btrfs, f2fs, ext4, fat, exfat and ntfs formatted SD cards and will also force new SD cards to be formatted as btrfs by default or a user configured filesystem.
 
+this fork changes the ZSTF to ZSTD:12 by default (both /home and SD card)
+
 Btrfs with its transparent compression and deduplication capabilities can achieve impressive storage gains but also improve loading times because of less data being read. It also supports instant snapshotting which is very useful to roll back to a previous state.
 
 **WARNING!!!! If you decide to so, it will install a service that will attempt on the next boot to convert the ext4 /home partition into btrfs and depending on the already used storage this operation may fail or take a long time!**
@@ -38,7 +40,7 @@ Btrfs with its transparent compression and deduplication capabilities can achiev
 
 **You can download the following easy to use .desktop installer:**
 
-[![Download installer](data/download-installer.png "Download installer")](https://gitlab.com/popsulfr/steamos-btrfs/-/raw/main/files/usr/share/applications/steamos-btrfs.desktop?inline=false)
+[![Download installer](data/download-installer.png "Download installer")](https://github.com/llbranco/steamos-btrfs/-/raw/main/files/usr/share/applications/steamos-btrfs.desktop?inline=false)
 
 **CAUTION**: there's not an easy way back if you proceed! Once the /home partition is converted, you can not go back to ext4 and keep your files.
 The original files that have been changed are backed up with the `.orig` extension. Keep in mind that they are specifically changed to allow for a btrfs `/home`.
