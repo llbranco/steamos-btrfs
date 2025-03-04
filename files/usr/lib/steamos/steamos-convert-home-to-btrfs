@@ -20,7 +20,7 @@ then
     source /etc/default/steamos-btrfs
 fi
 HOME_CONVERT_OPTS="${STEAMOS_BTRFS_HOME_CONVERT_OPTS:--L --uuid copy}"
-HOME_MOUNT_OPTS="${STEAMOS_BTRFS_HOME_MOUNT_OPTS:-defaults,nofail,x-systemd.growfs,noatime,lazytime,compress-force=zstd,space_cache=v2,autodefrag,nodiscard}"
+HOME_MOUNT_OPTS="${STEAMOS_BTRFS_HOME_MOUNT_OPTS:-defaults,nofail,x-systemd.growfs,noatime,lazytime,compress-force=zstd:12,space_cache=v2,autodefrag,nodiscard}"
 HOME_MOUNT_SUBVOL="${STEAMOS_BTRFS_HOME_MOUNT_SUBVOL:-@}"
 HOME_FORMAT="${STEAMOS_BTRFS_HOME_FORMAT:-0}"
 HOME_FORMAT_OPTS="${STEAMOS_BTRFS_HOME_FORMAT_OPTS:--f}"
